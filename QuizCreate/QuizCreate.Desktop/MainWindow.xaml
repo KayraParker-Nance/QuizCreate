@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Label x:Name="lblAppName" Content="QuizCreate" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Century Schoolbook" FontWeight="Bold"/>
+        <Label x:Name="lblQuizTitle" Content="Quiz Title: " HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" FontFamily="Century"/>
+        <TextBox x:Name="txtQuizTitle" HorizontalAlignment="Left" Margin="82,53,0,0" TextWrapping="Wrap" Text="MyQuiz" VerticalAlignment="Top" Width="300" FontFamily="Century"/>
+        <TextBox x:Name="txtInput" HorizontalAlignment="Left" Margin="14,78,0,0" TextWrapping="Wrap" Text="Paste input here..." VerticalAlignment="Top" Width="368" Height="305"/>
+        <WebBrowser x:Name="webPreview" Margin="400,78,10,51"/>
+        <Label x:Name="lblPreview" Content="Preview" HorizontalAlignment="Left" Margin="400,49,0,0" VerticalAlignment="Top" FontFamily="Century"/>
+        <ComboBox x:Name="cbxTheme" HorizontalAlignment="Left" Margin="262,388,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblTheme" Content="Theme: " HorizontalAlignment="Left" Margin="213,386,0,0" VerticalAlignment="Top" FontFamily="Century"/>
+        <Button x:Name="btnGenerate" Content="Generate" HorizontalAlignment="Left" Margin="400,390,0,0" VerticalAlignment="Top" FontFamily="Century"/>
+        <Button x:Name="btnOpenOutput" Content="Open Output Folder" HorizontalAlignment="Left" Margin="674,390,0,0" VerticalAlignment="Top" FontFamily="Century"/>
 
     </Grid>
 </Window>
