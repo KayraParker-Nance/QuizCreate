@@ -3,12 +3,13 @@ An app that converts formatted plain text from an AI model into an interactive H
 
 ## ToDo
 - [ ] Improve UI
+- [ ] Add dynamic window resizing
 - [ ] Add copy template button
 - [ ] Add save to button
 - [ ] Add built in AI generation (?)
 - [ ] Add mobile support
 
-## Template
+## AI Template (for generating app input)
 Please generate multiple choice quiz questions from the content I provide.
 Format your output EXACTLY as shown below — plain text only, no markdown,
 no extra commentary, just the questions.
