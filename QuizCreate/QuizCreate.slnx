@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="QuizCreate.Classes/QuizCreate.Classes.csproj" />
+  <Project Path="QuizCreate.Desktop/QuizCreate.Desktop.csproj" />
+</Solution>
