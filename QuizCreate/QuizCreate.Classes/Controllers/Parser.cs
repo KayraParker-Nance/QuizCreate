@@ -73,6 +73,16 @@ namespace QuizCreate.Classes.Controllers
                     continue;
                 }
 
+                if (IsExplanation(line))
+                {
+                    currentQuestion.Explanation = line.Substring(4).Trim();
+                    continue;
+                }
+
+                if (!string.IsNullOrEmpty(currentQuestion.Explanation))
+                {
+                    currentQuestion.Explanation += " " + line;
+                }
             }
 
             return result;
