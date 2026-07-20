@@ -1,22 +1,23 @@
-﻿<Window x:Class="QuizCreate.Desktop.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizCreate.Desktop"
+        xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="QuizCreate.Desktop.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="1500">
     <Grid>
         <Label x:Name="lblAppName" Content="QuizCreate" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Century Schoolbook" FontWeight="Bold"/>
         <Label x:Name="lblQuizTitle" Content="Quiz Title: " HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" FontFamily="Century"/>
         <TextBox x:Name="txtQuizTitle" HorizontalAlignment="Left" Margin="82,53,0,0" TextWrapping="Wrap" Text="MyQuiz" VerticalAlignment="Top" Width="300" FontFamily="Century"/>
-        <TextBox x:Name="txtInput" HorizontalAlignment="Left" Margin="14,78,0,0" TextWrapping="Wrap" Text="Paste input here..." VerticalAlignment="Top" Width="368" Height="305"/>
-        <WebBrowser x:Name="webPreview" Margin="400,78,10,51"/>
+        <TextBox x:Name="txtInput" HorizontalAlignment="Left" Margin="14,78,0,0" TextWrapping="Wrap" Text="Paste input here..." VerticalAlignment="Top" Width="368" Height="670" TextChanged="txtInput_TextChanged" FontFamily="Century" AcceptsReturn="True" AcceptsTab="True"/>
         <Label x:Name="lblPreview" Content="Preview" HorizontalAlignment="Left" Margin="400,49,0,0" VerticalAlignment="Top" FontFamily="Century"/>
-        <ComboBox x:Name="cbxTheme" HorizontalAlignment="Left" Margin="262,388,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblTheme" Content="Theme: " HorizontalAlignment="Left" Margin="213,386,0,0" VerticalAlignment="Top" FontFamily="Century"/>
-        <Button x:Name="btnGenerate" Content="Generate" HorizontalAlignment="Left" Margin="400,390,0,0" VerticalAlignment="Top" FontFamily="Century"/>
-        <Button x:Name="btnOpenOutput" Content="Open Output Folder" HorizontalAlignment="Left" Margin="674,390,0,0" VerticalAlignment="Top" FontFamily="Century"/>
+        <ComboBox x:Name="cbxTheme" HorizontalAlignment="Left" Margin="262,754,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbxTheme_SelectionChanged"/>
+        <Label x:Name="lblTheme" Content="Theme: " HorizontalAlignment="Left" Margin="198,753,0,0" VerticalAlignment="Top" FontFamily="Century"/>
+        <Button x:Name="btnGenerate" Content="Generate" HorizontalAlignment="Left" Margin="400,756,0,0" VerticalAlignment="Top" FontFamily="Century" Click="btnGenerate_Click"/>
+        <Button x:Name="btnOpenOutput" Content="Open Output Folder" HorizontalAlignment="Left" Margin="1374,756,0,0" VerticalAlignment="Top" FontFamily="Century" Click="btnOpenOutput_Click"/>
+        <Wpf:WebView2 x:Name="webPreview" HorizontalAlignment="Left" Height="673" Margin="400,78,0,0" VerticalAlignment="Top" Width="1090"/>
 
     </Grid>
 </Window>
